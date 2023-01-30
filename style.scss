@@ -184,16 +184,19 @@ body {
         .about-section-wrapper {
             align-items: center;
             gap: 100px;
-            >img{
-                width: 455px;
+            .about-section-video {
+                min-width: 486px;
+                min-height: 370px;
+                border-radius: 12px;
             }
             .about-section-content {
-                p:nth-child(1) {
+                .about-section-header {
                     @include fonts.h2();
                     margin-bottom: 20px;
                 }
-                p:nth-child(2) {
+                .about-section-text {
                     @include fonts.t6();
+                    margin-bottom: 8px;
                 }
             }
         }
@@ -1346,10 +1349,14 @@ body {
         }
         .about-section {
             .about-section-wrapper {
-                >img{
-                    width: 246px;
+                .about-section-video {
+                    height: 250px;
+                    width: 100%;
+                    min-width: auto;
+                    min-height: auto;
                 }
                 .about-section-content {
+                    margin-top: 32px;
                     p:nth-child(1) {
                         @include fonts.mobileH1();
                         margin-bottom: 16px;

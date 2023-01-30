@@ -246,21 +246,24 @@ body {
   align-items: center;
   gap: 100px;
 }
-.main .about-section .about-section-wrapper > img {
-  width: 455px;
+.main .about-section .about-section-wrapper .about-section-video {
+  min-width: 486px;
+  min-height: 370px;
+  border-radius: 12px;
 }
-.main .about-section .about-section-wrapper .about-section-content p:nth-child(1) {
+.main .about-section .about-section-wrapper .about-section-content .about-section-header {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 43px;
   margin-bottom: 20px;
 }
-.main .about-section .about-section-wrapper .about-section-content p:nth-child(2) {
+.main .about-section .about-section-wrapper .about-section-content .about-section-text {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 145%;
+  margin-bottom: 8px;
 }
 .main .suitable-section {
   background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
@@ -1518,8 +1521,14 @@ body {
     width: 100%;
     margin-top: 32px;
   }
-  .main .about-section .about-section-wrapper > img {
-    width: 246px;
+  .main .about-section .about-section-wrapper .about-section-video {
+    height: 250px;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+  }
+  .main .about-section .about-section-wrapper .about-section-content {
+    margin-top: 32px;
   }
   .main .about-section .about-section-wrapper .about-section-content p:nth-child(1) {
     font-family: "Exo 2", sans-serif;

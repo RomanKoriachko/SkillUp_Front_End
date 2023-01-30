@@ -298,6 +298,106 @@ body {
             @include mainButton();
         }
     }
+    .salary-section {
+        background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
+        padding: 100px 0px;
+        .salary-section-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            text-align: center;
+            @include fonts.mobileT5();
+            .salary-section-graph {
+                align-items: flex-end;
+                gap: 14px;
+            }
+            .salary {
+                margin-bottom: 10px;
+                color: #4D4D4D;
+            }
+            .employee-salary-section-text {
+                margin-top: 10px;
+                padding-top: 12px;
+                border-top: 1px solid #989898;
+                >p:nth-child(2) {
+                    color: #989898;
+                    margin-top: 3px;
+                }
+            }
+            .employee-graph {
+                color: white;
+            }
+            .junior {
+                .junior-row {
+                    align-items: flex-end;
+                }
+                .junior-min {
+                    background: #A2C989;
+                    border-radius: 6px 6px 0px 0px;
+                    width: 60px;
+                    height: 60px;
+                    padding-top: 35px;
+                }
+                .junior-max {
+                    width: 60px;
+                    height: 80px;
+                    background: #4EBD09;
+                    border-radius: 6px 6px 0px 0px;
+                    padding-top: 55px;
+                }
+            }
+            .middle {
+                .middle-row {
+                    align-items: flex-end;
+                }
+                .middle-min {
+                    background: #A2C989;
+                    border-radius: 6px 6px 0px 0px;
+                    width: 60px;
+                    height: 150px;
+                    padding-top: 125px;
+                }
+                .middle-max {
+                    width: 60px;
+                    height: 210px;
+                    background: #4EBD09;
+                    border-radius: 6px 6px 0px 0px;
+                    padding-top: 185px;
+                }
+            }
+            .senior {
+                .senior-row {
+                    align-items: flex-end;
+                }
+                .senior-min {
+                    background: #A2C989;
+                    border-radius: 6px 6px 0px 0px;
+                    width: 60px;
+                    height: 250px;
+                    padding-top: 225px;
+                }
+                .senior-max {
+                    width: 60px;
+                    height: 300px;
+                    background: #4EBD09;
+                    border-radius: 6px 6px 0px 0px;
+                    padding-top: 275px;
+                }
+            }
+        }
+        .salary-section-text {
+            text-align: left;
+            
+            >p:nth-child(1) {
+                @include fonts.h3();
+                margin-bottom: 16px;
+            }
+            >p:nth-child(2) {
+                @include fonts.t6();
+                margin-right: 260px;
+            }
+        }
+    }
     .plan-section {
         padding: 50px 0px;
         background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
@@ -1097,6 +1197,17 @@ body {
                 }
             }
         }
+        .salary-section {
+            .salary-section-wrapper {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                .salary-section-text {
+                    >p:nth-child(2) {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
         .plan-section {
             .plan-section-wrapper {
                 .plan-section-item {
@@ -1457,6 +1568,57 @@ body {
             .aspect-section-btn {
                 width: 100%;
                 margin-top: 24px;
+            }
+        }
+        .salary-section {
+            padding: 32px 0px;
+            .salary-section-wrapper{
+                gap: 32px;
+                .salary-section-graph {
+                    gap: 8px;
+                }
+                .junior {
+                    .junior-row {
+                        align-items: flex-end;
+                    }
+                    .junior-min {
+                        width: 46px;
+                    }
+                    .junior-max {
+                        width: 46px;
+                    }
+                }
+                .middle {
+                    .middle-row {
+                        align-items: flex-end;
+                    }
+                    .middle-min {
+                        width: 46px;
+                    }
+                    .middle-max {
+                        width: 46px;
+                    }
+                }
+                .senior {
+                    .senior-row {
+                        align-items: flex-end;
+                    }
+                    .senior-min {
+                        width: 46px;
+                    }
+                    .senior-max {
+                        width: 46px;
+                    }
+                }
+            }
+            .salary-section-text {
+                >p:nth-child(1) {
+                    @include fonts.mobileH2();
+                }
+                >p:nth-child(2) {
+                    @include fonts.mobileT6();
+                    margin-right: 260px;
+                }
             }
         }
         .plan-section {

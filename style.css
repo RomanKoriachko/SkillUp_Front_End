@@ -418,6 +418,108 @@ body {
   background-color: #FA7A63;
   border-color: #FA7A63;
 }
+.main .salary-section {
+  background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
+  padding: 100px 0px;
+}
+.main .salary-section .salary-section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main .salary-section .salary-section-wrapper .salary-section-graph {
+  align-items: flex-end;
+  gap: 14px;
+}
+.main .salary-section .salary-section-wrapper .salary {
+  margin-bottom: 10px;
+  color: #4D4D4D;
+}
+.main .salary-section .salary-section-wrapper .employee-salary-section-text {
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #989898;
+}
+.main .salary-section .salary-section-wrapper .employee-salary-section-text > p:nth-child(2) {
+  color: #989898;
+  margin-top: 3px;
+}
+.main .salary-section .salary-section-wrapper .employee-graph {
+  color: white;
+}
+.main .salary-section .salary-section-wrapper .junior .junior-row {
+  align-items: flex-end;
+}
+.main .salary-section .salary-section-wrapper .junior .junior-min {
+  background: #A2C989;
+  border-radius: 6px 6px 0px 0px;
+  width: 60px;
+  height: 60px;
+  padding-top: 35px;
+}
+.main .salary-section .salary-section-wrapper .junior .junior-max {
+  width: 60px;
+  height: 80px;
+  background: #4EBD09;
+  border-radius: 6px 6px 0px 0px;
+  padding-top: 55px;
+}
+.main .salary-section .salary-section-wrapper .middle .middle-row {
+  align-items: flex-end;
+}
+.main .salary-section .salary-section-wrapper .middle .middle-min {
+  background: #A2C989;
+  border-radius: 6px 6px 0px 0px;
+  width: 60px;
+  height: 150px;
+  padding-top: 125px;
+}
+.main .salary-section .salary-section-wrapper .middle .middle-max {
+  width: 60px;
+  height: 210px;
+  background: #4EBD09;
+  border-radius: 6px 6px 0px 0px;
+  padding-top: 185px;
+}
+.main .salary-section .salary-section-wrapper .senior .senior-row {
+  align-items: flex-end;
+}
+.main .salary-section .salary-section-wrapper .senior .senior-min {
+  background: #A2C989;
+  border-radius: 6px 6px 0px 0px;
+  width: 60px;
+  height: 250px;
+  padding-top: 225px;
+}
+.main .salary-section .salary-section-wrapper .senior .senior-max {
+  width: 60px;
+  height: 300px;
+  background: #4EBD09;
+  border-radius: 6px 6px 0px 0px;
+  padding-top: 275px;
+}
+.main .salary-section .salary-section-text {
+  text-align: left;
+}
+.main .salary-section .salary-section-text > p:nth-child(1) {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 16px;
+}
+.main .salary-section .salary-section-text > p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
+  margin-right: 260px;
+}
 .main .plan-section {
   padding: 50px 0px;
   background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
@@ -1338,6 +1440,13 @@ body {
     grid-row: 2;
     justify-self: start;
   }
+  .main .salary-section .salary-section-wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .main .salary-section .salary-section-wrapper .salary-section-text > p:nth-child(2) {
+    margin-right: 0px;
+  }
   .main .plan-section .plan-section-wrapper .plan-section-item {
     padding: 0px 40px;
     width: 300px;
@@ -1669,6 +1778,55 @@ body {
   .main .aspect-section .aspect-section-btn {
     width: 100%;
     margin-top: 24px;
+  }
+  .main .salary-section {
+    padding: 32px 0px;
+  }
+  .main .salary-section .salary-section-wrapper {
+    gap: 32px;
+  }
+  .main .salary-section .salary-section-wrapper .salary-section-graph {
+    gap: 8px;
+  }
+  .main .salary-section .salary-section-wrapper .junior .junior-row {
+    align-items: flex-end;
+  }
+  .main .salary-section .salary-section-wrapper .junior .junior-min {
+    width: 46px;
+  }
+  .main .salary-section .salary-section-wrapper .junior .junior-max {
+    width: 46px;
+  }
+  .main .salary-section .salary-section-wrapper .middle .middle-row {
+    align-items: flex-end;
+  }
+  .main .salary-section .salary-section-wrapper .middle .middle-min {
+    width: 46px;
+  }
+  .main .salary-section .salary-section-wrapper .middle .middle-max {
+    width: 46px;
+  }
+  .main .salary-section .salary-section-wrapper .senior .senior-row {
+    align-items: flex-end;
+  }
+  .main .salary-section .salary-section-wrapper .senior .senior-min {
+    width: 46px;
+  }
+  .main .salary-section .salary-section-wrapper .senior .senior-max {
+    width: 46px;
+  }
+  .main .salary-section .salary-section-text > p:nth-child(1) {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .main .salary-section .salary-section-text > p:nth-child(2) {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    margin-right: 260px;
   }
   .main .plan-section {
     padding: 32px 0px;

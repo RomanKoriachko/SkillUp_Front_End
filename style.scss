@@ -547,7 +547,7 @@ body {
                 width: 470px;
                 height: 247px;
                 border-radius: 12px;
-                padding: 0px 86px;
+                padding: 0px 45px;
                 margin-left: -30px;
                 margin-right: -30px;
                 display: flex;
@@ -566,26 +566,36 @@ body {
             .plan-section-item-1 {
                 background-image: url(images/plan-item1-img.png);
                 background-repeat: no-repeat;
-                background-size: 100% 100%;
+                background-size: 90% 100%;
                 >p:nth-child(1) {
-                    margin-top: 40px;
+                    margin-top: 25px;
                 }
             }
             .plan-section-item-2 {
                 background-image: url(images/plan-item2-img.png);
                 background-repeat: no-repeat;
-                background-size: 100% 100%;
-                padding: 0px 80px;
+                background-size: 92% 100%;
+                padding: 0px 65px;
                 >p:nth-child(1) {
-                    margin-top: 27px;
+                    margin-top: 25px;
                 }
             }
             .plan-section-item-3 {
+                background-image: url(images/plan-item2-img.png);
+                background-repeat: no-repeat;
+                background-size: 92% 100%;
+                padding: 0px 65px;
+                >p:nth-child(1) {
+                    margin-top: 25px;
+                }
+            }
+            .plan-section-item-4 {
                 background-image: url(images/plan-item3-img.png);
                 background-repeat: no-repeat;
-                background-size: 100% 100%;
+                background-size: 94% 100%;
+                padding: 0px 53px;
                 >p:nth-child(1) {
-                    margin-top: 38px;
+                    margin-top: 25px;
                 }
             }
         }
@@ -606,7 +616,6 @@ body {
                 >p:nth-child(1) {
                     @include fonts.h6();
                     color: #4D4D4D;
-                    margin-bottom: 8px;
                 }
                 >p:nth-child(2) {
                     @include fonts.t6();
@@ -617,7 +626,7 @@ body {
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 >p:nth-child(1) {
-                    margin-top: 50px;
+                    margin-top: 30px;
                 }
             }
             .plan-section-item-2 {
@@ -626,16 +635,25 @@ body {
                 background-size: 100% 100%;
                 padding: 0px 65px;
                 >p:nth-child(1) {
-                    margin-top: 15px;
+                    margin-top: 30px;
                 }
             }
             .plan-section-item-3 {
+                background-image: url(images/plan-item2-img.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                padding: 0px 65px;
+                >p:nth-child(1) {
+                    margin-top: 30px;
+                }
+            }
+            .plan-section-item-4 {
                 background-image: url(images/plan-item3-img.png);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
                 padding: 0px 70px;
                 >p:nth-child(1) {
-                    margin-top: 40px;
+                    margin-top: 30px;
                 }
             }
         }
@@ -648,7 +666,6 @@ body {
                 padding: 0px 54px;
                 display: flex;
                 flex-direction: column;
-                
                 >p {
                     text-align: left;
                 }
@@ -672,10 +689,15 @@ body {
                 background-size: 100% 100%;
             }
             .plan-section-item-3 {
+                background-image: url(images/plan-item2-img.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .plan-section-item-4 {
                 background-image: url(images/plan-item3-img.png);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
-                padding: 0px 75px;
+                padding: 0px 55px;
             }
         }
         .plan-section-btn {
@@ -1047,29 +1069,27 @@ body {
             .plan-section-wrapper {
                 justify-content: center;
                 .plan-section-item {
-                    width: 350px;
+                    width: 300px;
                     height: 270px;
                     padding: 0px 43px;
                     margin-left: -20px;
                     margin-right: -20px;
                 }
                 .plan-section-item-1 {
-                    padding: 0px 60px;
-                    >p:nth-child(1) {
-                        margin-top: 30px;
-                    }
+                    padding: 0px 30px;
+                    background-size: 92% 100%;
                 }
                 .plan-section-item-2 {
-                    padding: 0px 63px;
-                    >p:nth-child(1) {
-                        margin-top: 5px;
-                    }
+                    padding: 0px 40px;
+                    background-size: 92% 100%;
                 }
                 .plan-section-item-3 {
-                    padding: 0px 70px;
-                    >p:nth-child(1) {
-                        margin-top: 30px;
-                    }
+                    padding: 0px 37px;
+                    background-size: 92% 100%;
+                }
+                .plan-section-item-4 {
+                    padding: 0px 40px;
+                    background-size: 92% 100%;
                 }
             }
         }
@@ -1236,38 +1256,33 @@ body {
             }
         }
         .plan-section {
+            .slick-dotted.slick-slider {
+                margin-bottom: 0;
+            }
             .plan-section-wrapper {
-                .plan-section-item {
-                    padding: 0px 40px;
-                    width: 300px;
-                    height: 230px;
-                    margin-right: -15px;
-                    margin-left: -15px;
-                    >p:nth-child(1) {
-                        @include fonts.mobileT3();
-                        margin-bottom: 8px;
-                    }
-                    >p:nth-child(2) {
-                        @include fonts.mobileT9();
-                    }
+                display: none;
+            }
+            .plan-section-slider {
+                display: block;
+                .slick-dots {
+                    bottom: 65px;
                 }
-                .plan-section-item-1 {
-                    >p:nth-child(1) {
-                        margin-top: 40px;
-                    }
+                .slick-dots li {
+                    margin: 0px 0px;
                 }
-                .plan-section-item-2 {
-                    padding: 0px 45px;
-                    >p:nth-child(1) {
-                        margin-top: 10px;
-                    }
+                .slick-dots li.slick-active button:before {
+                    color: #333142;
                 }
-                .plan-section-item-3 {
-                    padding: 0px 50px;
-                    >p:nth-child(1) {
-                        margin-top: 30px;
-                    }
+                .slick-dots li button:before {
+                    color: #989898;
+                    opacity: 1;
                 }
+                .slick-track {
+                    transform: translate3d(-30px, 0px, 0px);
+                }
+            }
+            .plan-section-btn {
+                bottom: 40px;
             }
         }
         .benefits-section {
@@ -1384,7 +1399,7 @@ body {
     }
 }
 
-// For review and plan section slider
+// For review section slider
 @media(max-width: 715px) {
     .main {
         .review-section{
@@ -1396,36 +1411,6 @@ body {
                         margin-left: 0;
                     }
                 }
-            }
-        }
-        .plan-section {
-            .slick-dotted.slick-slider {
-                margin-bottom: 0;
-            }
-            .plan-section-wrapper {
-                display: none;
-            }
-            .plan-section-slider {
-                display: block;
-                .slick-dots {
-                    bottom: 65px;
-                }
-                .slick-dots li {
-                    margin: 0px 0px;
-                }
-                .slick-dots li.slick-active button:before {
-                    color: #333142;
-                }
-                .slick-dots li button:before {
-                    color: #989898;
-                    opacity: 1;
-                }
-                .slick-track {
-                    transform: translate3d(-30px, 0px, 0px);
-                }
-            }
-            .plan-section-btn {
-                bottom: 40px;
             }
         }
     }
@@ -1689,15 +1674,33 @@ body {
                 .plan-section-item {
                     width: 445px;
                     height: 240px;
+                    >p:nth-child(1) {
+                        @include fonts.mobileT3();
+                        color: #4D4D4D;
+                        margin-bottom: 8px;
+                    }
+                    >p:nth-child(2) {
+                        @include fonts.mobileT9();
+                    }
                 }
                 .plan-section-item-1 {
                     >p:nth-child(1) {
-                        margin-top: 35px;
+                        margin-top: 40px;
+                    }
+                }
+                .plan-section-item-2 {
+                    >p:nth-child(1) {
+                        margin-top: 40px;
                     }
                 }
                 .plan-section-item-3 {
                     >p:nth-child(1) {
-                        margin-top: 30px;
+                        margin-top: 40px;
+                    }
+                }
+                .plan-section-item-4 {
+                    >p:nth-child(1) {
+                        margin-top: 40px;
                     }
                 }
                 .slick-dots {
@@ -1873,7 +1876,7 @@ body {
     }
 }
 
-// L Modile
+// S Modile
 @media(max-width: 450px) {
     .main{
         .suitable-section {
@@ -1954,13 +1957,19 @@ body {
                     margin-bottom: 30px;
                 }
                 .plan-section-item-1 {
-                    padding-top: 24px;
+                    padding-top: 15px;
+                }
+                .plan-section-item-2 {
+                    padding: 15px 50px;
                 }
                 .plan-section-item-2 {
                     padding: 15px 50px;
                 }
                 .plan-section-item-3 {
-                    padding: 23px 55px;
+                    padding: 15px 50px;
+                }
+                .plan-section-item-4 {
+                    padding: 15px 55px;
                 }
                 .slick-dots {
                     bottom: -40px;

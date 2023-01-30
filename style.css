@@ -345,12 +345,14 @@ body {
   display: none;
 }
 .main .aspect-section {
-  padding: 100px 0px;
+  padding: 50px 0px;
+  text-align: center;
 }
 .main .aspect-section .aspect-section-content {
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  justify-items: center;
   align-items: center;
-  gap: 220px;
 }
 .main .aspect-section .aspect-section-content .aspect-section-content-header {
   font-family: "Exo 2", sans-serif;
@@ -358,16 +360,33 @@ body {
   font-size: 36px;
   line-height: 43px;
   margin-bottom: 20px;
-}
-.main .aspect-section .aspect-section-content > div:first-child {
-  width: 440px;
+  text-align: left;
 }
 .main .aspect-section .aspect-section-content .aspect-section-list-item {
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
+  text-align: left;
 }
-.main .aspect-section .aspect-section-content .aspect-section-list-item > p {
+.main .aspect-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper {
+  align-items: center;
+  gap: 10px;
+}
+.main .aspect-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background: #4EBD09;
+  text-align: center;
+  color: white;
+  padding: 3px 0px;
+}
+.main .aspect-section .aspect-section-content .aspect-section-list-item p {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -375,6 +394,29 @@ body {
 }
 .main .aspect-section .aspect-section-content > img {
   width: 394px;
+}
+.main .aspect-section .aspect-section-btn {
+  margin-top: 65px;
+  width: 184px;
+  height: 48px;
+  color: white;
+  background-color: #FA2702;
+  border: 1px solid #FA2702;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  transition: 0.3s all;
+}
+.main .aspect-section .aspect-section-btn:hover {
+  background-color: #A61A01;
+  border-color: #A61A01;
+}
+.main .aspect-section .aspect-section-btn:active {
+  background-color: #FA7A63;
+  border-color: #FA7A63;
 }
 .main .plan-section {
   padding: 50px 0px;
@@ -1106,9 +1148,6 @@ body {
   .main .review-section .review-section-content .review-section-content-img {
     margin-right: -15px;
   }
-  .main .aspect-section .aspect-section-content {
-    gap: 150px;
-  }
   .main .plan-section .plan-section-wrapper {
     justify-content: center;
   }
@@ -1291,12 +1330,13 @@ body {
   .main .suitable-section .suitable-slider-mobile {
     display: none;
   }
-  .main .aspect-section {
-    padding: 50px 0px;
-  }
   .main .aspect-section .aspect-section-content {
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
     gap: 50px;
+  }
+  .main .aspect-section .aspect-section-content > div {
+    grid-row: 2;
+    justify-self: start;
   }
   .main .plan-section .plan-section-wrapper .plan-section-item {
     padding: 0px 40px;
@@ -1601,6 +1641,9 @@ body {
     transform: translateX(-50%);
     width: 94%;
   }
+  .main .aspect-section {
+    padding: 48px 0px;
+  }
   .main .aspect-section .aspect-section-content {
     gap: 32px;
   }
@@ -1617,11 +1660,15 @@ body {
     font-size: 24px;
     line-height: 130%;
   }
-  .main .aspect-section .aspect-section-content .aspect-section-list-item {
+  .main .aspect-section .aspect-section-content .aspect-section-list-item p {
     font-family: "Exo 2", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 145%;
+  }
+  .main .aspect-section .aspect-section-btn {
+    width: 100%;
+    margin-top: 24px;
   }
   .main .plan-section {
     padding: 32px 0px;
@@ -1832,6 +1879,9 @@ body {
 @media (max-width: 450px) {
   .main .suitable-section .suitable-slider {
     display: none;
+  }
+  .main .suitable-section .slick-dotted.slick-slider {
+    margin-bottom: 0;
   }
   .main .suitable-section .suitable-slider-mobile {
     margin-left: -15px;

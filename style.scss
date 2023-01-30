@@ -218,14 +218,12 @@ body {
         }
         .suitable-wrapper {
             display: grid;
-            grid-template-areas: 
-            "a a b b c c"
-            ". d d e e ."
-            ;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
             gap: 20px;
+            width: 100%;
             .suitable-item {
-                width: 388px;
-                height: 140px;
+                width: 100%;
                 background-color: #ffffff;
                 padding: 20px;
                 box-shadow: 0px 67px 27px rgba(63, 105, 72, 0.01), 0px 38px 23px rgba(63, 105, 72, 0.05), 0px 17px 17px rgba(63, 105, 72, 0.09), 0px 4px 9px rgba(63, 105, 72, 0.1), 0px 0px 0px rgba(63, 105, 72, 0.1);
@@ -236,6 +234,7 @@ body {
                     margin-bottom: 10px;
                     >p{
                         @include fonts.h5();
+                        text-align: left;
                         color: #4D4D4D;
                     }
                 }
@@ -244,21 +243,6 @@ body {
                     text-align: left;
                     margin-left: 20px;
                 }
-            }
-            .suitable-item-1 {
-                grid-area: a;
-            }
-            .suitable-item-2 {
-                grid-area: b;
-            }
-            .suitable-item-3 {
-                grid-area: c;
-            }
-            .suitable-item-4 {
-                grid-area: d;
-            }
-            .suitable-item-5 {
-                grid-area: e;
             }
         }
         .suitable-slider {
@@ -884,7 +868,8 @@ body {
             .suitable-wrapper{
                 justify-content: center;
                 .suitable-item{
-                    max-width: 300px;
+                    // max-width: 300px;
+                    width: auto;
                     height: auto;
                 }
             }
@@ -1053,15 +1038,11 @@ body {
                 margin-bottom: 50px;
             }
             .suitable-wrapper {
-                grid-template-areas: 
-                "a a b b"
-                "c c d d"
-                ". e e ."
-                ;
+                grid-template-columns: 1fr 1fr;
                 gap: 10px;
                 .suitable-item {
-                    width: 265px;
-                    height: 120px;
+                    // width: 265px;
+                    // height: 140px;
                     padding: 8px;
                     .suitable-item-header{
                         gap: 9px;
@@ -1365,7 +1346,8 @@ body {
             }
         }
         .suitable-section {
-            padding: 32px 0px;
+            padding-top: 32px;
+            padding-bottom: 0px;
             .suitable-section-header {
                 @include fonts.mobileH2();
                 text-align: left;
@@ -1376,6 +1358,7 @@ body {
             }
             .suitable-slider {
                 display: block;
+                margin-bottom: 0;
                 .suitable-item {
                     max-width: 350px;
                     height: 120px;
@@ -1675,7 +1658,7 @@ body {
                 display: block;
                 .suitable-item {
                     max-width: 265px;
-                    height: 120px;
+                    height: 135px;
                     padding: 8px;
                     background-color: #ffffff;
                     box-shadow: 0px 82px 33px rgba(15, 13, 28, 0.01), 0px 46px 28px rgba(15, 13, 28, 0.05), 0px 21px 21px rgba(15, 13, 28, 0.09), 0px 5px 11px rgba(15, 13, 28, 0.1), 0px 0px 0px rgba(15, 13, 28, 0.1);

@@ -252,7 +252,7 @@ body {
             display: none;
         }
     }
-    .aspect-section, .expectation-section {
+    .aspect-section, .expectation-section, .teacher-section {
         padding: 50px 0px;
         text-align: center;
         .aspect-section-content {
@@ -918,6 +918,34 @@ body {
             }
         }
     }
+    .teacher-section {
+        padding: 100px 0px;
+        .aspect-section-content {
+            grid-template-columns: 1fr 1fr;
+            >img{
+                justify-self: start;
+                width: 433px;
+            }
+            .aspect-section-list-item {
+                .aspect-section-list-item-number {
+                    background-color: transparent;
+                    background-image: url(images/check-img.svg);
+                }
+                p{
+                    line-height: 145%;
+                }
+            }
+        }
+        .aspect-section-content-header {
+            margin-bottom: 30px;
+        }
+        .teacher-name {
+            @include fonts.h5();
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+    }
     .slider-section {
         text-align: center;
         >p{
@@ -1465,6 +1493,15 @@ body {
                 padding: 0 33px;
             }
         }
+        .teacher-section {
+            .aspect-section-content {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                >img{
+                    justify-self: center;
+                }
+            }
+        }
         .slider-section {
             .big-container {
                 .slider {
@@ -1976,6 +2013,28 @@ body {
                 margin-top: 24px;
                 .tariffs-btn {
                     width: 100%;
+                }
+            }
+        }
+        .teacher-section {
+            padding: 48px 0px;
+            .aspect-section-content {
+                gap: 30px;
+                >img{
+                    width: 221px
+                }
+                .aspect-section-content-header {
+                    @include fonts.mobileH2();
+                    margin-bottom: 16px;
+                }
+                .teacher-name {
+                    @include fonts.mobileH5();
+                    margin-bottom: 18px;
+                }
+                .aspect-section-list-item {
+                    p{
+                        @include fonts.mobileT5();
+                    }
                 }
             }
         }

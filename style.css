@@ -344,17 +344,17 @@ body {
 .main .suitable-section .suitable-slider-mobile {
   display: none;
 }
-.main .aspect-section, .main .expectation-section {
+.main .aspect-section, .main .expectation-section, .main .teacher-section {
   padding: 50px 0px;
   text-align: center;
 }
-.main .aspect-section .aspect-section-content, .main .expectation-section .aspect-section-content {
+.main .aspect-section .aspect-section-content, .main .expectation-section .aspect-section-content, .main .teacher-section .aspect-section-content {
   display: grid;
   grid-template-columns: 1fr 0.6fr;
   justify-items: center;
   align-items: center;
 }
-.main .aspect-section .aspect-section-content .aspect-section-content-header, .main .expectation-section .aspect-section-content .aspect-section-content-header {
+.main .aspect-section .aspect-section-content .aspect-section-content-header, .main .expectation-section .aspect-section-content .aspect-section-content-header, .main .teacher-section .aspect-section-content .aspect-section-content-header {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -362,17 +362,17 @@ body {
   margin-bottom: 20px;
   text-align: left;
 }
-.main .aspect-section .aspect-section-content .aspect-section-list-item, .main .expectation-section .aspect-section-content .aspect-section-list-item {
+.main .aspect-section .aspect-section-content .aspect-section-list-item, .main .expectation-section .aspect-section-content .aspect-section-list-item, .main .teacher-section .aspect-section-content .aspect-section-list-item {
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
   text-align: left;
 }
-.main .aspect-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper, .main .expectation-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper {
+.main .aspect-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper, .main .expectation-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper, .main .teacher-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper {
   align-items: center;
   gap: 10px;
 }
-.main .aspect-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number, .main .expectation-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number {
+.main .aspect-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number, .main .expectation-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number, .main .teacher-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -386,16 +386,16 @@ body {
   color: white;
   padding: 3px 0px;
 }
-.main .aspect-section .aspect-section-content .aspect-section-list-item p, .main .expectation-section .aspect-section-content .aspect-section-list-item p {
+.main .aspect-section .aspect-section-content .aspect-section-list-item p, .main .expectation-section .aspect-section-content .aspect-section-list-item p, .main .teacher-section .aspect-section-content .aspect-section-list-item p {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 }
-.main .aspect-section .aspect-section-content > img, .main .expectation-section .aspect-section-content > img {
+.main .aspect-section .aspect-section-content > img, .main .expectation-section .aspect-section-content > img, .main .teacher-section .aspect-section-content > img {
   width: 394px;
 }
-.main .aspect-section .aspect-section-btn, .main .expectation-section .aspect-section-btn {
+.main .aspect-section .aspect-section-btn, .main .expectation-section .aspect-section-btn, .main .teacher-section .aspect-section-btn {
   margin-top: 65px;
   width: 184px;
   height: 48px;
@@ -410,11 +410,11 @@ body {
   line-height: 19px;
   transition: 0.3s all;
 }
-.main .aspect-section .aspect-section-btn:hover, .main .expectation-section .aspect-section-btn:hover {
+.main .aspect-section .aspect-section-btn:hover, .main .expectation-section .aspect-section-btn:hover, .main .teacher-section .aspect-section-btn:hover {
   background-color: #A61A01;
   border-color: #A61A01;
 }
-.main .aspect-section .aspect-section-btn:active, .main .expectation-section .aspect-section-btn:active {
+.main .aspect-section .aspect-section-btn:active, .main .expectation-section .aspect-section-btn:active, .main .teacher-section .aspect-section-btn:active {
   background-color: #FA7A63;
   border-color: #FA7A63;
 }
@@ -1133,6 +1133,34 @@ body {
 .main .english-section .english-section-text span {
   color: #4EBD09;
 }
+.main .teacher-section {
+  padding: 100px 0px;
+}
+.main .teacher-section .aspect-section-content {
+  grid-template-columns: 1fr 1fr;
+}
+.main .teacher-section .aspect-section-content > img {
+  justify-self: start;
+  width: 433px;
+}
+.main .teacher-section .aspect-section-content .aspect-section-list-item .aspect-section-list-item-number {
+  background-color: transparent;
+  background-image: url(images/check-img.svg);
+}
+.main .teacher-section .aspect-section-content .aspect-section-list-item p {
+  line-height: 145%;
+}
+.main .teacher-section .aspect-section-content-header {
+  margin-bottom: 30px;
+}
+.main .teacher-section .teacher-name {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+}
 .main .slider-section {
   text-align: center;
 }
@@ -1743,6 +1771,13 @@ body {
     line-height: 145%;
     padding: 0 33px;
   }
+  .main .teacher-section .aspect-section-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .main .teacher-section .aspect-section-content > img {
+    justify-self: center;
+  }
   .main .slider-section .big-container .slider .slide {
     height: 500px;
     margin: 0px 0px;
@@ -2251,6 +2286,35 @@ body {
   }
   .main .tariffs-section .button-wrapper .tariffs-btn {
     width: 100%;
+  }
+  .main .teacher-section {
+    padding: 48px 0px;
+  }
+  .main .teacher-section .aspect-section-content {
+    gap: 30px;
+  }
+  .main .teacher-section .aspect-section-content > img {
+    width: 221px;
+  }
+  .main .teacher-section .aspect-section-content .aspect-section-content-header {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+  .main .teacher-section .aspect-section-content .teacher-name {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+  .main .teacher-section .aspect-section-content .aspect-section-list-item p {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
   }
   .main .slider-section > p {
     font-family: "Exo 2", sans-serif;

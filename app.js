@@ -146,8 +146,12 @@ window.addEventListener("scroll", function () {
 
   if (
     window.pageYOffset ===
+      document.documentElement.scrollHeight -
+        document.documentElement.clientHeight ||
     document.documentElement.scrollHeight -
-      document.documentElement.clientHeight
+      document.documentElement.clientHeight -
+      window.pageYOffset <
+      1
   ) {
     aboutLessonsBtn.classList.remove("active");
     programBtn.classList.remove("active");
@@ -263,11 +267,47 @@ window.addEventListener("scroll", function () {
 // Animation
 
 let salarySection = document.querySelector(".salary-section");
+let juniorMin = document.querySelector(".junior-min");
+let juniorMax = document.querySelector(".junior-max");
+let middleMin = document.querySelector(".middle-min");
+let middleMax = document.querySelector(".middle-max");
+let seniorMin = document.querySelector(".senior-min");
+let seniorMax = document.querySelector(".senior-max");
+
 window.addEventListener("scroll", function () {
-  console.log(
+  if (
     salarySection.getBoundingClientRect().bottom -
-      document.documentElement.clientHeight
-  );
+      document.documentElement.clientHeight <
+      0 &&
+    window.innerWidth > 576
+  ) {
+    juniorMin.classList.add("junior-min-active");
+    juniorMax.classList.add("junior-max-active");
+    middleMin.classList.add("middle-min-active");
+    middleMax.classList.add("middle-max-active");
+    seniorMin.classList.add("senior-min-active");
+    seniorMax.classList.add("senior-max-active");
+  } else if (
+    window.innerWidth <= 576 &&
+    salarySection.getBoundingClientRect().bottom -
+      document.documentElement.clientHeight -
+      200 <
+      0
+  ) {
+    juniorMin.classList.add("junior-min-active");
+    juniorMax.classList.add("junior-max-active");
+    middleMin.classList.add("middle-min-active");
+    middleMax.classList.add("middle-max-active");
+    seniorMin.classList.add("senior-min-active");
+    seniorMax.classList.add("senior-max-active");
+  } else {
+    juniorMin.classList.remove("junior-min-active");
+    juniorMax.classList.remove("junior-max-active");
+    middleMin.classList.remove("middle-min-active");
+    middleMax.classList.remove("middle-max-active");
+    seniorMin.classList.remove("senior-min-active");
+    seniorMax.classList.remove("senior-max-active");
+  }
 });
 
 // Timer

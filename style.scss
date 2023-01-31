@@ -310,6 +310,9 @@ body {
     .salary-section {
         background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
         padding: 100px 0px;
+        min-height: 600px;
+        display: flex;
+        align-items: flex-end;
         .salary-section-wrapper{
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -344,15 +347,25 @@ body {
                     background: #A2C989;
                     border-radius: 6px 6px 0px 0px;
                     width: 60px;
+                    height: 20px;
+                    padding-top: 0px;
+                    transition: .7s all;
+                }
+                .junior-min-active{
                     height: 60px;
                     padding-top: 35px;
                 }
                 .junior-max {
                     width: 60px;
-                    height: 80px;
+                    height: 20px;
                     background: #4EBD09;
                     border-radius: 6px 6px 0px 0px;
+                    padding-top: 0px;
+                    transition: .7s all;
+                }
+                .junior-max-active {
                     padding-top: 55px;
+                    height: 80px;
                 }
             }
             .middle {
@@ -363,14 +376,24 @@ body {
                     background: #A2C989;
                     border-radius: 6px 6px 0px 0px;
                     width: 60px;
+                    height: 20px;
+                    padding-top: 0px;
+                    transition: 1s all;
+                }
+                .middle-min-active {
                     height: 150px;
                     padding-top: 125px;
                 }
                 .middle-max {
                     width: 60px;
-                    height: 210px;
+                    height: 20px;
                     background: #4EBD09;
                     border-radius: 6px 6px 0px 0px;
+                    padding-top: 0px;
+                    transition: 1s all;
+                }
+                .middle-max-active {
+                    height: 210px;
                     padding-top: 185px;
                 }
             }
@@ -382,14 +405,24 @@ body {
                     background: #A2C989;
                     border-radius: 6px 6px 0px 0px;
                     width: 60px;
+                    height: 20px;
+                    padding-top: 0px;
+                    transition: 1.3s all;
+                }
+                .senior-min-active {
                     height: 250px;
                     padding-top: 225px;
                 }
                 .senior-max {
                     width: 60px;
-                    height: 300px;
+                    height: 20px;
                     background: #4EBD09;
                     border-radius: 6px 6px 0px 0px;
+                    padding-top: 0px;
+                    transition: 1.3s all;
+                }
+                .senior-max-active {
+                    height: 300px;
                     padding-top: 275px;
                 }
             }
@@ -1381,6 +1414,7 @@ body {
             }
         }
         .salary-section {
+            min-height: 675px;
             .salary-section-wrapper {
                 grid-template-columns: 1fr;
                 justify-items: center;
@@ -1388,6 +1422,15 @@ body {
                     >p:nth-child(2) {
                         margin-right: 0px;
                     }
+                }
+                .salary{
+                    @include fonts.mobileT8();
+                }
+                .employee-salary-section-text {
+                    >p{
+                        @include fonts.mobileT8();
+                    }
+                    
                 }
             }
         }
@@ -1754,6 +1797,7 @@ body {
             }
         }
         .salary-section {
+            min-height: 590px;
             padding: 32px 0px;
             .salary-section-wrapper{
                 gap: 32px;
@@ -1765,10 +1809,10 @@ body {
                         align-items: flex-end;
                     }
                     .junior-min {
-                        width: 46px;
+                        width: 43px;
                     }
                     .junior-max {
-                        width: 46px;
+                        width: 43px;
                     }
                 }
                 .middle {
@@ -1776,10 +1820,10 @@ body {
                         align-items: flex-end;
                     }
                     .middle-min {
-                        width: 46px;
+                        width: 43px;
                     }
                     .middle-max {
-                        width: 46px;
+                        width: 43px;
                     }
                 }
                 .senior {
@@ -1787,10 +1831,10 @@ body {
                         align-items: flex-end;
                     }
                     .senior-min {
-                        width: 46px;
+                        width: 43px;
                     }
                     .senior-max {
-                        width: 46px;
+                        width: 43px;
                     }
                 }
             }
@@ -2017,6 +2061,9 @@ body {
                 margin-bottom: 18px;
             }
             .big-container {
+                .slider-cover {
+                    display: none;
+                }
                 .slider {
                     .slide {
                         height: 230px;
@@ -2174,6 +2221,9 @@ body {
                     bottom: -32px;
                 }
             }
+        }
+        .salary-section {
+            min-height: 640px;
         }
         .plan-section {
             .plan-section-slider {

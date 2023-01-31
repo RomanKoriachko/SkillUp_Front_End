@@ -669,7 +669,8 @@ body {
   border-color: #FA7A63;
 }
 .main .plan-section {
-  padding: 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
   text-align: center;
   position: relative;
@@ -858,48 +859,50 @@ body {
   background-size: 100% 100%;
   padding: 0px 55px;
 }
-.main .plan-section .plan-section-btn {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 184px;
-  height: 48px;
-  color: white;
-  background-color: #FA2702;
-  border: 1px solid #FA2702;
-  border-radius: 8px;
-  cursor: pointer;
+.main .plan-section .opportunities-wrapper {
+  gap: 50px;
+  text-align: left;
+}
+.main .plan-section .opportunities-header {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 50px;
+}
+.main .plan-section .opportunities-text-wrapper {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  transition: 0.3s all;
+  gap: 20px;
+  margin-bottom: 23px;
+  align-items: center;
 }
-.main .plan-section .plan-section-btn:hover {
-  background-color: #A61A01;
-  border-color: #A61A01;
+.main .plan-section .opportunities-text-wrapper .opportunities-item-number {
+  min-width: 16px;
+  height: 16px;
+  background: #4EBD09;
+  border-radius: 50px;
 }
-.main .plan-section .plan-section-btn:active {
-  background-color: #FA7A63;
-  border-color: #FA7A63;
-}
-.main .benefits-section {
+.main .schedule-section {
   padding: 100px 0px;
 }
-.main .benefits-section .big-container {
-  margin: 0 auto;
-  max-width: 1440px;
-  background-image: url(images/benefits-section-bg.png);
-  background-position-x: left;
-  background-position-y: 150px;
-  background-repeat: no-repeat;
+.main .schedule-section .schedule-header {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  height: auto;
+  margin-bottom: 50px;
+  text-align: center;
 }
-.main .benefits-section .big-container .benefits-section-content {
+.main .schedule-section .schedule-section-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-.main .benefits-section .big-container .benefits-section-content > p:nth-child(1) {
+.main .schedule-section .schedule-section-content > p:nth-child(1) {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -907,34 +910,34 @@ body {
   width: 330px;
   justify-self: center;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu {
+.main .schedule-section .schedule-section-content .schedule-section-menu {
   max-width: 600px;
   justify-self: end;
   margin-top: -20px;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper {
   padding: 24px 0px;
   background-color: #ffffff;
   cursor: pointer;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item > div:nth-child(1) {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item > div:nth-child(1) {
   align-items: center;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item > div:nth-child(1) > img {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item > div:nth-child(1) > img {
   margin-right: 20px;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item > div:nth-child(1) > p {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item > div:nth-child(1) > p {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item .benefits-section-item-btn {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item .schedule-section-item-btn {
   height: 24px;
   width: 24px;
   border: none;
@@ -945,10 +948,10 @@ body {
   background-size: 100%;
   transition: 0.3s all;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item .active-btn {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item .active-btn {
   background-image: url(images/benefits-section-arrow-up-img.svg);
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-subitem {
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-subitem {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -962,14 +965,18 @@ body {
   transition: 0.3s all;
   z-index: -1;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .active {
+.main .schedule-section .schedule-section-content .schedule-section-menu .active {
   opacity: 1;
   visibility: visible;
   margin-top: -10px;
   margin-bottom: 20px;
   height: auto;
 }
-.main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-line {
+.main .schedule-section .schedule-section-content .schedule-section-menu .active .schedule-item-header {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-line {
   border-bottom: 1px solid #4D4D4D;
 }
 .main .slider-section {
@@ -1532,18 +1539,23 @@ body {
   .main .plan-section .plan-section-btn {
     bottom: 40px;
   }
-  .main .benefits-section .big-container {
-    background-image: none;
+  .main .plan-section .opportunities-wrapper {
+    flex-direction: column;
+    gap: 0;
   }
-  .main .benefits-section .big-container .benefits-section-content {
+  .main .schedule-section {
+    padding: 50px;
+  }
+  .main .schedule-section .schedule-section-content {
     grid-template-columns: 1fr;
+    gap: 0;
   }
-  .main .benefits-section .big-container .benefits-section-content > p:nth-child(1) {
+  .main .schedule-section .schedule-section-content > p:nth-child(1) {
     width: 100%;
     text-align: center;
     margin-bottom: 24px;
   }
-  .main .benefits-section .big-container .benefits-section-content .benefits-section-menu {
+  .main .schedule-section .schedule-section-content .schedule-section-menu {
     justify-self: center;
     margin-top: 0;
   }
@@ -1925,28 +1937,58 @@ body {
     bottom: 25px;
     width: 94%;
   }
-  .main .benefits-section {
+  .main .plan-section .opportunities-section {
+    margin-top: -40px;
+  }
+  .main .plan-section .opportunities-header {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .main .plan-section .opportunities-text-wrapper {
+    margin-bottom: 16px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    align-items: flex-start;
+  }
+  .main .plan-section .opportunities-text-wrapper .opportunities-item-number {
+    margin-top: 5px;
+  }
+  .main .schedule-section {
     padding: 48px 0px;
   }
-  .main .benefits-section .big-container .benefits-section-content > p:nth-child(1) {
+  .main .schedule-section .schedule-header {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: left;
+    margin-bottom: 14px;
+  }
+  .main .schedule-section .schedule-section-content > p:nth-child(1) {
     text-align: left;
     font-family: "Exo 2", sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
   }
-  .main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item > div:nth-child(1) > img {
+  .main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item > div:nth-child(1) > img {
     width: 16px;
     height: 16px;
     margin-right: 16px;
   }
-  .main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-item-wrapper .benefits-section-item > div:nth-child(1) > p {
+  .main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-item-wrapper .schedule-section-item > div:nth-child(1) > p {
     font-family: "Exo 2", sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 145%;
   }
-  .main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-subitem {
+  .main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-subitem {
     font-family: "Exo 2", sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -1954,7 +1996,7 @@ body {
     margin-left: 33px;
     height: 45px;
   }
-  .main .benefits-section .big-container .benefits-section-content .benefits-section-menu .benefits-section-subitem.active {
+  .main .schedule-section .schedule-section-content .schedule-section-menu .schedule-section-subitem.active {
     height: auto;
   }
   .main .slider-section > p {

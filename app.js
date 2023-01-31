@@ -97,9 +97,9 @@ window.addEventListener("scroll", function () {
 
 // Dropdown Menu
 
-let dropdownMenu = document.querySelectorAll(".benefits-section-item-wrapper");
-let dropdownItem = document.querySelectorAll(".benefits-section-subitem");
-let dropdownButton = document.querySelectorAll(".benefits-section-item-btn");
+let dropdownMenu = document.querySelectorAll(".schedule-section-item-wrapper");
+let dropdownItem = document.querySelectorAll(".schedule-section-subitem");
+let dropdownButton = document.querySelectorAll(".schedule-section-item-btn");
 
 for (let i = 0; i < dropdownMenu.length; i++) {
   dropdownMenu[i].addEventListener("click", function () {

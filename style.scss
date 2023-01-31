@@ -986,7 +986,7 @@ body {
                     content: "";
                 }
                 .slide {
-                    height: 600px;
+                    height: 742px;
                     margin: 0px 110px;
                 }
                 .slick-prev, .slick-next {
@@ -1018,71 +1018,51 @@ body {
             }
         }
     }
-    .career-section {
-        padding: 100px 0px;
-        .career-section-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            .career-section-text {
-                width: 380px;
-                p:nth-child(1) {
-                    @include fonts.h3();
-                }
-                p:nth-child(2) {
-                    @include fonts.t6();
-                    margin-top: 20px;
-                    margin-bottom: 30px;
-                }
-                button{
-                    @include mainButton();
-                }
-            }
-            >img{
-                width: 433px;
-            }
-        }
-    }
-    .count-section {
-        padding: 60px 0px;
-        background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
-        .count-section-wrapper {
-            justify-content: space-around;
-            .count-section-item {
-                >p:nth-child(1) {
-                    @include fonts.h1();
-                    color: #4D4D4D;
-                }
-                >div{
-                    width: 40px;
-                    height: 1px;
-                    background-color: #4D4D4D;
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                }
-                >p:nth-child(3) {
-                    @include fonts.t3();
-                }
-            }
-            .count-section-item:last-child {
-                width: 240px;
-            }
-        }
-    }
     .form-section {
-        padding: 100px 0px;
+        padding-top: 50px;
+        padding-bottom: 100px;
         background: #0D1A30;
         color: white;
+        .form-header {
+            text-align: center;
+            @include fonts.h2();
+            margin-bottom: 50px;
+
+        }
         .form-section-wrapper {
             justify-content: space-evenly;
             .form-section-text {
                 width: 450px;
                 >p:nth-child(1) {
-                    @include fonts.h3();
-                    margin-bottom: 20px;
+                    @include fonts.t6();
+                    margin-bottom: 30px;
                 }
                 >p:nth-child(2) {
+                    @include fonts.h5();
+                    margin-bottom: 10px;
+                }
+                .time {
+                    @include fonts.h1();
+                    margin-right: 10px;
+                }
+                .seconds {
+                    @include fonts.h1();
+                    color: #989898;
+                }
+                .time-label {
                     @include fonts.t5();
+                    >div:nth-child(1){
+                        margin-right: 70px;
+                    }
+                    >div:nth-child(2){
+                        margin-right: 40px;
+                    }
+                    >div:nth-child(3){
+                        margin-right: 60px;
+                    }
+                    >div:nth-child(4){
+                        color: #989898;
+                    }
                 }
             }
             .form-wrapper {
@@ -1524,23 +1504,6 @@ body {
                 }
             }
         }
-        .career-section {
-            padding: 60px 0px;
-            .career-section-wrapper {
-                grid-template-columns: 1fr;
-                justify-items: center;
-                gap: 32px;
-            }
-        }
-        .count-section {
-            .count-section-wrapper {
-                flex-direction: column;
-                align-items: center;
-                .count-section-item {
-                    width: 240px;
-                }
-            }
-        }
         .companies-section {
             .companies-tablet-slider {
                 display: block;
@@ -1553,8 +1516,12 @@ body {
             padding: 70px 0px;
             .form-section-wrapper {
                 flex-direction: column;
+                justify-items: start;
                 align-items: center;
                 gap: 24px;
+                .form-section-text {
+                    width: auto;
+                }
             }
         }
     }
@@ -2043,6 +2010,7 @@ body {
                 @include fonts.mobileH1();
                 text-align: left;
                 margin-left: 15px;
+                margin-bottom: 18px;
             }
             .big-container {
                 .slider {
@@ -2058,63 +2026,36 @@ body {
                 }
             }
         }
-        .career-section {
-            padding: 48px 0px;
-            .career-section-wrapper {
-                >img{
-                    width: 235px;
-                }
-                .career-section-text {
-                    width: 100%;
-                    >p:nth-child(1) {
-                        @include fonts.mobileH2();
-                    }
-                    >p:nth-child(2) {
-                        @include fonts.mobileT6();
-                    }
-                    button {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        .count-section {
-            padding: 32px 0px;
-            .count-section-wrapper {
-                .count-section-item {
-                    width: 170px;
-                    margin-bottom: 32px;
-                    >p:nth-child(1){
-                        font-weight: 400;
-                        font-size: 46px;
-                        line-height: 55px;
-                    }
-                    >div{
-                        margin-top: 8px;
-                        margin-bottom: 8px;
-                        width: 60px;
-                    }
-                    >p:nth-child(3){
-                        @include fonts.mobileT5();
-                    }
-                }
-                .count-section-item:last-child {
-                    width: 170px;
-                }
-            }
-        }
         .form-section {
             text-align: left;
-            padding: 32px 0px;
+            padding-top: 32px;
+            padding-bottom: 48px;
+            .form-header {
+                text-align: left;
+                @include fonts.mobileH2();
+                margin-bottom: 16px;
+            }
             .form-section-wrapper {
                 align-items: stretch;
+                gap: 32px;
                 .form-section-text{
                     width: 100%;
                     >p:nth-child(1) {
-                        @include fonts.mobileH2();
+                        @include fonts.mobileT6();
                     }
                     >p:nth-child(2) {
-                        @include fonts.mobileT6();
+                        @include fonts.mobileH3();
+                    }
+                    .time, .seconds {
+                        font-weight: 400;
+                        font-size: 54px;
+                        line-height: 65px;
+                    }
+                    .time-label {
+                        @include fonts.mobileT8();
+                        >div:nth-child(3){
+                            margin-right: 45px;
+                        }
                     }
                 }
                 .form-wrapper{
@@ -2281,6 +2222,28 @@ body {
             }
             .plan-section-btn {
                 bottom: 32px;
+            }
+        }
+        .form-section {
+            .form-section-wrapper {
+                .form-section-text{
+                    .time, .seconds {
+                        font-weight: 400;
+                        font-size: 42px;
+                        line-height: 65px;
+                    }
+                    .time-label {
+                        >div:nth-child(1){
+                            margin-right: 45px;
+                        }
+                        >div:nth-child(2){
+                            margin-right: 25px;
+                        }
+                        >div:nth-child(3){
+                            margin-right: 30px;
+                        }
+                    }
+                }
             }
         }
     }

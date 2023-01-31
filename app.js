@@ -1,99 +1,99 @@
 // Navigation
 
-let aboutLessonsBtn = document.querySelector(".about-lessons-btn");
-let aboutUsBtn = document.querySelector(".about-us-btn");
-let contactsBtn = document.querySelector(".contacts-btn");
-let registrationBtns = document.querySelectorAll(".registration-btn");
+// let aboutLessonsBtn = document.querySelector(".about-lessons-btn");
+// let aboutUsBtn = document.querySelector(".about-us-btn");
+// let contactsBtn = document.querySelector(".contacts-btn");
+// let registrationBtns = document.querySelectorAll(".registration-btn");
 
-let header = document.querySelector(".header");
+// let header = document.querySelector(".header");
 
-let aspectSection = document.querySelector(".aspect-section");
-let countSection = document.querySelector(".count-section");
-let footer = document.querySelector(".footer");
-let formSection = document.querySelector(".form-section");
+// let aspectSection = document.querySelector(".aspect-section");
+// let countSection = document.querySelector(".count-section");
+// let footer = document.querySelector(".footer");
+// let formSection = document.querySelector(".form-section");
 
-for (let i = 0; i < registrationBtns.length; i++) {
-  registrationBtns[i].addEventListener("click", function () {
-    window.scrollTo({
-      top:
-        formSection.getBoundingClientRect().top +
-        window.pageYOffset -
-        header.clientHeight,
-      behavior: "smooth",
-    });
-  });
-}
+// for (let i = 0; i < registrationBtns.length; i++) {
+//   registrationBtns[i].addEventListener("click", function () {
+//     window.scrollTo({
+//       top:
+//         formSection.getBoundingClientRect().top +
+//         window.pageYOffset -
+//         header.clientHeight,
+//       behavior: "smooth",
+//     });
+//   });
+// }
 
-aboutLessonsBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top:
-      aspectSection.getBoundingClientRect().top +
-      window.pageYOffset -
-      header.clientHeight,
-    behavior: "smooth",
-  });
-});
-aboutUsBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top:
-      countSection.getBoundingClientRect().top +
-      window.pageYOffset -
-      header.clientHeight,
-    behavior: "smooth",
-  });
-});
-contactsBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top:
-      footer.getBoundingClientRect().top +
-      window.pageYOffset -
-      header.clientHeight,
-    behavior: "smooth",
-  });
-});
+// aboutLessonsBtn.addEventListener("click", function () {
+//   window.scrollTo({
+//     top:
+//       aspectSection.getBoundingClientRect().top +
+//       window.pageYOffset -
+//       header.clientHeight,
+//     behavior: "smooth",
+//   });
+// });
+// aboutUsBtn.addEventListener("click", function () {
+//   window.scrollTo({
+//     top:
+//       countSection.getBoundingClientRect().top +
+//       window.pageYOffset -
+//       header.clientHeight,
+//     behavior: "smooth",
+//   });
+// });
+// contactsBtn.addEventListener("click", function () {
+//   window.scrollTo({
+//     top:
+//       footer.getBoundingClientRect().top +
+//       window.pageYOffset -
+//       header.clientHeight,
+//     behavior: "smooth",
+//   });
+// });
 
-window.addEventListener("scroll", function () {
-  if (
-    window.pageYOffset >=
-      aspectSection.getBoundingClientRect().top +
-        window.pageYOffset -
-        header.clientHeight -
-        1 &&
-    aspectSection.getBoundingClientRect().bottom >= 0
-  ) {
-    aboutLessonsBtn.classList.add("active");
-    aboutUsBtn.classList.remove("active");
-    contactsBtn.classList.remove("active");
-  } else {
-    aboutLessonsBtn.classList.remove("active");
-  }
+// window.addEventListener("scroll", function () {
+//   if (
+//     window.pageYOffset >=
+//       aspectSection.getBoundingClientRect().top +
+//         window.pageYOffset -
+//         header.clientHeight -
+//         1 &&
+//     aspectSection.getBoundingClientRect().bottom >= 0
+//   ) {
+//     aboutLessonsBtn.classList.add("active");
+//     aboutUsBtn.classList.remove("active");
+//     contactsBtn.classList.remove("active");
+//   } else {
+//     aboutLessonsBtn.classList.remove("active");
+//   }
 
-  if (
-    window.pageYOffset >=
-      countSection.getBoundingClientRect().top +
-        window.pageYOffset -
-        header.clientHeight -
-        1 &&
-    countSection.getBoundingClientRect().bottom >= 0
-  ) {
-    aboutLessonsBtn.classList.remove("active");
-    aboutUsBtn.classList.add("active");
-    contactsBtn.classList.remove("active");
-  } else {
-    aboutUsBtn.classList.remove("active");
-  }
+//   if (
+//     window.pageYOffset >=
+//       countSection.getBoundingClientRect().top +
+//         window.pageYOffset -
+//         header.clientHeight -
+//         1 &&
+//     countSection.getBoundingClientRect().bottom >= 0
+//   ) {
+//     aboutLessonsBtn.classList.remove("active");
+//     aboutUsBtn.classList.add("active");
+//     contactsBtn.classList.remove("active");
+//   } else {
+//     aboutUsBtn.classList.remove("active");
+//   }
 
-  if (
-    pageYOffset + window.innerHeight ===
-    document.documentElement.scrollHeight
-  ) {
-    aboutLessonsBtn.classList.remove("active");
-    aboutUsBtn.classList.remove("active");
-    contactsBtn.classList.add("active");
-  } else {
-    countSection.classList.remove("active");
-  }
-});
+//   if (
+//     pageYOffset + window.innerHeight ===
+//     document.documentElement.scrollHeight
+//   ) {
+//     aboutLessonsBtn.classList.remove("active");
+//     aboutUsBtn.classList.remove("active");
+//     contactsBtn.classList.add("active");
+//   } else {
+//     countSection.classList.remove("active");
+//   }
+// });
 
 // Dropdown Menu
 
@@ -195,3 +195,29 @@ window.addEventListener("scroll", function () {
     cover.classList.remove("hide");
   }
 });
+
+// Timer
+
+var countDownDate = new Date("February 28, 2023 23:59:59").getTime();
+
+var x = setInterval(function () {
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("time").innerHTML =
+    days + " : " + hours + " : " + minutes + " :";
+  document.getElementById("seconds").innerHTML = seconds;
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("time").innerHTML = "Час вийшов";
+    document.getElementById("seconds").innerHTML = "";
+    document.getElementById("time-label").innerHTML = "";
+  }
+}, 1000);

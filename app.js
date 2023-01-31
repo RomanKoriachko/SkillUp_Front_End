@@ -198,26 +198,47 @@ window.addEventListener("scroll", function () {
 
 // Timer
 
-var countDownDate = new Date("February 28, 2023 23:59:59").getTime();
+const countDownDate = new Date("February 28, 2023 23:59:59").getTime();
 
-var x = setInterval(function () {
-  var now = new Date().getTime();
+const x = setInterval(function () {
+  const now = new Date().getTime();
 
-  var distance = countDownDate - now;
+  const distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("time").innerHTML =
-    days + " : " + hours + " : " + minutes + " :";
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
+
+  const colons = document.querySelectorAll(".colon");
+  const time = document.querySelector(".time-wrapper");
+  const timeIsOverAlert = document.querySelector(".time-is-over");
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("time").innerHTML = "Час вийшов";
-    document.getElementById("seconds").innerHTML = "";
-    document.getElementById("time-label").innerHTML = "";
+    time.classList.add("hide");
+    time.classList.remove("show-time");
+    timeIsOverAlert.classList.add("show");
+    timeIsOverAlert.classList.remove("hide");
+    for (let i = 0; i < colons.length; i++) {
+      colons[i].classList.add("hide");
+      colons[i].classList.remove("show");
+    }
+  } else {
+    time.classList.add("show-time");
+    time.classList.remove("hide");
+    timeIsOverAlert.classList.add("hide");
+    timeIsOverAlert.classList.remove("show");
+    for (let i = 0; i < colons.length; i++) {
+      colons[i].classList.add("show");
+      colons[i].classList.remove("hide");
+    }
   }
 }, 1000);

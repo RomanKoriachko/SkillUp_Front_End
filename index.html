@@ -1009,16 +1009,28 @@
                     <div class="form-section-text">
                         <p>Заповніть форму, щоб забронювати місце за акційною ціною та отримати безкоштовну консультацію менеджера. Знижка дійсна до кінця лютого 2023 року.</p>
                         <p>До завершення акції лишилось:</p>
-                        <div class="row">
+                        <div class="time-is-over hide">Час вийшов</div>
+                        <div class="row time-wrapper">
                             <div id="time" class="time"></div>
-                            <div id="seconds" class="seconds"></div>
-                        </div>
-                        
-                        <div id="time-label" class="time-label row">
-                            <div>Днів</div>
-                            <div>Годин</div>
-                            <div>Хвилин</div>
-                            <div>Секунд</div>
+                            <div id="days-wrapper">
+                                <div id="days" class="days"></div>
+                                <div class="time-label">Днів</div>
+                            </div>
+                            <div id="colon-1" class="colon">:</div>
+                            <div id="hours-wrapper">
+                                <div id="hours" class="hours"></div>
+                                <div class="time-label">Годин</div>
+                            </div>
+                            <div id="colon-2" class="colon">:</div>
+                            <div id="minutes-wrapper">
+                                <div id="minutes" class="minutes"></div>
+                                <div class="time-label">Хвилин</div>
+                            </div>
+                            <div id="colon-3" class="colon">:</div>
+                            <div id="seconds-wrapper">
+                                <div id="seconds" class="seconds"></div>
+                                <div class="seconds-label time-label">Секунд</div>
+                            </div>
                         </div>
                     </div>
                     <form>

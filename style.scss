@@ -37,6 +37,15 @@ body {
 .row {
     display: flex;
 }
+.show-time {
+    display: flex;
+}
+.show{
+    display: block;
+}
+.hide {
+    display: none;
+}
 
 .header {
     height: 110px;
@@ -1027,12 +1036,14 @@ body {
             text-align: center;
             @include fonts.h2();
             margin-bottom: 50px;
-
         }
         .form-section-wrapper {
             justify-content: space-evenly;
             .form-section-text {
                 width: 450px;
+                .time-is-over {
+                    @include fonts.h1();
+                }
                 >p:nth-child(1) {
                     @include fonts.t6();
                     margin-bottom: 30px;
@@ -1043,26 +1054,19 @@ body {
                 }
                 .time {
                     @include fonts.h1();
-                    margin-right: 10px;
+                }
+                .days, .hours, .minutes, .colon {
+                    @include fonts.h1();
+                }
+                .colon {
+                    margin: 0px 10px
                 }
                 .seconds {
                     @include fonts.h1();
                     color: #989898;
                 }
-                .time-label {
-                    @include fonts.t5();
-                    >div:nth-child(1){
-                        margin-right: 70px;
-                    }
-                    >div:nth-child(2){
-                        margin-right: 40px;
-                    }
-                    >div:nth-child(3){
-                        margin-right: 60px;
-                    }
-                    >div:nth-child(4){
-                        color: #989898;
-                    }
+                .seconds-label {
+                    color: #989898;
                 }
             }
             .form-wrapper {
@@ -2040,22 +2044,19 @@ body {
                 gap: 32px;
                 .form-section-text{
                     width: 100%;
+                    .time-is-over {
+                        @include fonts.mobileH1();
+                    }
                     >p:nth-child(1) {
                         @include fonts.mobileT6();
                     }
                     >p:nth-child(2) {
                         @include fonts.mobileH3();
                     }
-                    .time, .seconds {
+                    .time, .days, .hours, .minutes, .colon, .seconds {
                         font-weight: 400;
                         font-size: 54px;
                         line-height: 65px;
-                    }
-                    .time-label {
-                        @include fonts.mobileT8();
-                        >div:nth-child(3){
-                            margin-right: 45px;
-                        }
                     }
                 }
                 .form-wrapper{
@@ -2227,21 +2228,10 @@ body {
         .form-section {
             .form-section-wrapper {
                 .form-section-text{
-                    .time, .seconds {
+                    .time, .days, .hours, .minutes, .colon, .seconds {
                         font-weight: 400;
                         font-size: 42px;
                         line-height: 65px;
-                    }
-                    .time-label {
-                        >div:nth-child(1){
-                            margin-right: 45px;
-                        }
-                        >div:nth-child(2){
-                            margin-right: 25px;
-                        }
-                        >div:nth-child(3){
-                            margin-right: 30px;
-                        }
                     }
                 }
             }

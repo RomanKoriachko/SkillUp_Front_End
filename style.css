@@ -68,6 +68,18 @@ body {
   display: flex;
 }
 
+.show-time {
+  display: flex;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .header {
   height: 110px;
   width: 100%;
@@ -1252,6 +1264,12 @@ body {
 .main .form-section .form-section-wrapper .form-section-text {
   width: 450px;
 }
+.main .form-section .form-section-wrapper .form-section-text .time-is-over {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+}
 .main .form-section .form-section-wrapper .form-section-text > p:nth-child(1) {
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
@@ -1271,7 +1289,15 @@ body {
   font-weight: 400;
   font-size: 64px;
   line-height: 77px;
-  margin-right: 10px;
+}
+.main .form-section .form-section-wrapper .form-section-text .days, .main .form-section .form-section-wrapper .form-section-text .hours, .main .form-section .form-section-wrapper .form-section-text .minutes, .main .form-section .form-section-wrapper .form-section-text .colon {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+}
+.main .form-section .form-section-wrapper .form-section-text .colon {
+  margin: 0px 10px;
 }
 .main .form-section .form-section-wrapper .form-section-text .seconds {
   font-family: "Exo 2", sans-serif;
@@ -1280,22 +1306,7 @@ body {
   line-height: 77px;
   color: #989898;
 }
-.main .form-section .form-section-wrapper .form-section-text .time-label {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-}
-.main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(1) {
-  margin-right: 70px;
-}
-.main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(2) {
-  margin-right: 40px;
-}
-.main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(3) {
-  margin-right: 60px;
-}
-.main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(4) {
+.main .form-section .form-section-wrapper .form-section-text .seconds-label {
   color: #989898;
 }
 .main .form-section .form-section-wrapper .form-wrapper {
@@ -2305,6 +2316,12 @@ body {
   .main .form-section .form-section-wrapper .form-section-text {
     width: 100%;
   }
+  .main .form-section .form-section-wrapper .form-section-text .time-is-over {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
   .main .form-section .form-section-wrapper .form-section-text > p:nth-child(1) {
     font-family: "Exo 2", sans-serif;
     font-weight: 400;
@@ -2317,19 +2334,10 @@ body {
     font-size: 20px;
     line-height: 24px;
   }
-  .main .form-section .form-section-wrapper .form-section-text .time, .main .form-section .form-section-wrapper .form-section-text .seconds {
+  .main .form-section .form-section-wrapper .form-section-text .time, .main .form-section .form-section-wrapper .form-section-text .days, .main .form-section .form-section-wrapper .form-section-text .hours, .main .form-section .form-section-wrapper .form-section-text .minutes, .main .form-section .form-section-wrapper .form-section-text .colon, .main .form-section .form-section-wrapper .form-section-text .seconds {
     font-weight: 400;
     font-size: 54px;
     line-height: 65px;
-  }
-  .main .form-section .form-section-wrapper .form-section-text .time-label {
-    font-family: "Exo 2", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-  }
-  .main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(3) {
-    margin-right: 45px;
   }
   .main .form-section .form-section-wrapper .form-wrapper form {
     width: 100%;
@@ -2483,18 +2491,9 @@ body {
   .main .plan-section .plan-section-btn {
     bottom: 32px;
   }
-  .main .form-section .form-section-wrapper .form-section-text .time, .main .form-section .form-section-wrapper .form-section-text .seconds {
+  .main .form-section .form-section-wrapper .form-section-text .time, .main .form-section .form-section-wrapper .form-section-text .days, .main .form-section .form-section-wrapper .form-section-text .hours, .main .form-section .form-section-wrapper .form-section-text .minutes, .main .form-section .form-section-wrapper .form-section-text .colon, .main .form-section .form-section-wrapper .form-section-text .seconds {
     font-weight: 400;
     font-size: 42px;
     line-height: 65px;
-  }
-  .main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(1) {
-    margin-right: 45px;
-  }
-  .main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(2) {
-    margin-right: 25px;
-  }
-  .main .form-section .form-section-wrapper .form-section-text .time-label > div:nth-child(3) {
-    margin-right: 30px;
   }
 }

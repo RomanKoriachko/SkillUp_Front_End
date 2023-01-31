@@ -1,99 +1,163 @@
 // Navigation
 
-// let aboutLessonsBtn = document.querySelector(".about-lessons-btn");
-// let aboutUsBtn = document.querySelector(".about-us-btn");
-// let contactsBtn = document.querySelector(".contacts-btn");
-// let registrationBtns = document.querySelectorAll(".registration-btn");
+let aboutLessonsBtn = document.querySelector(".about-lessons-btn");
+let programBtn = document.querySelector(".program-btn");
+let teachersBtn = document.querySelector(".teachers-btn");
+let reviewBtn = document.querySelector(".review-btn");
+let contactsBtn = document.querySelector(".contacts-btn");
+let registrationBtns = document.querySelectorAll(".registration-btn");
 
-// let header = document.querySelector(".header");
+let header = document.querySelector(".header");
 
-// let aspectSection = document.querySelector(".aspect-section");
-// let countSection = document.querySelector(".count-section");
-// let footer = document.querySelector(".footer");
-// let formSection = document.querySelector(".form-section");
+let aspectSection = document.querySelector(".aspect-section");
+let programSection = document.querySelector(".schedule-section");
+let teachersSection = document.querySelector(".teacher-section");
+let reviewSection = document.querySelector(".slider-section");
+let footer = document.querySelector(".footer");
 
-// for (let i = 0; i < registrationBtns.length; i++) {
-//   registrationBtns[i].addEventListener("click", function () {
-//     window.scrollTo({
-//       top:
-//         formSection.getBoundingClientRect().top +
-//         window.pageYOffset -
-//         header.clientHeight,
-//       behavior: "smooth",
-//     });
-//   });
-// }
+let formSection = document.querySelector(".form-section");
 
-// aboutLessonsBtn.addEventListener("click", function () {
-//   window.scrollTo({
-//     top:
-//       aspectSection.getBoundingClientRect().top +
-//       window.pageYOffset -
-//       header.clientHeight,
-//     behavior: "smooth",
-//   });
-// });
-// aboutUsBtn.addEventListener("click", function () {
-//   window.scrollTo({
-//     top:
-//       countSection.getBoundingClientRect().top +
-//       window.pageYOffset -
-//       header.clientHeight,
-//     behavior: "smooth",
-//   });
-// });
-// contactsBtn.addEventListener("click", function () {
-//   window.scrollTo({
-//     top:
-//       footer.getBoundingClientRect().top +
-//       window.pageYOffset -
-//       header.clientHeight,
-//     behavior: "smooth",
-//   });
-// });
+for (let i = 0; i < registrationBtns.length; i++) {
+  registrationBtns[i].addEventListener("click", function () {
+    window.scrollTo({
+      top:
+        formSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        header.clientHeight,
+      behavior: "smooth",
+    });
+  });
+}
 
-// window.addEventListener("scroll", function () {
-//   if (
-//     window.pageYOffset >=
-//       aspectSection.getBoundingClientRect().top +
-//         window.pageYOffset -
-//         header.clientHeight -
-//         1 &&
-//     aspectSection.getBoundingClientRect().bottom >= 0
-//   ) {
-//     aboutLessonsBtn.classList.add("active");
-//     aboutUsBtn.classList.remove("active");
-//     contactsBtn.classList.remove("active");
-//   } else {
-//     aboutLessonsBtn.classList.remove("active");
-//   }
+aboutLessonsBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top:
+      aspectSection.getBoundingClientRect().top +
+      window.pageYOffset -
+      header.clientHeight,
+    behavior: "smooth",
+  });
+});
+programBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top:
+      programSection.getBoundingClientRect().top +
+      window.pageYOffset -
+      header.clientHeight,
+    behavior: "smooth",
+  });
+});
+teachersBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top:
+      teachersSection.getBoundingClientRect().top +
+      window.pageYOffset -
+      header.clientHeight,
+    behavior: "smooth",
+  });
+});
+reviewBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top:
+      reviewSection.getBoundingClientRect().top +
+      window.pageYOffset -
+      header.clientHeight,
+    behavior: "smooth",
+  });
+});
+contactsBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top:
+      footer.getBoundingClientRect().top +
+      window.pageYOffset -
+      header.clientHeight,
+    behavior: "smooth",
+  });
+});
 
-//   if (
-//     window.pageYOffset >=
-//       countSection.getBoundingClientRect().top +
-//         window.pageYOffset -
-//         header.clientHeight -
-//         1 &&
-//     countSection.getBoundingClientRect().bottom >= 0
-//   ) {
-//     aboutLessonsBtn.classList.remove("active");
-//     aboutUsBtn.classList.add("active");
-//     contactsBtn.classList.remove("active");
-//   } else {
-//     aboutUsBtn.classList.remove("active");
-//   }
+window.addEventListener("scroll", function () {
+  if (
+    window.pageYOffset >=
+      aspectSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        header.clientHeight -
+        1 &&
+    aspectSection.getBoundingClientRect().bottom >= 0
+  ) {
+    aboutLessonsBtn.classList.add("active");
+    programBtn.classList.remove("active");
+    teachersBtn.classList.remove("active");
+    reviewBtn.classList.remove("active");
+    contactsBtn.classList.remove("active");
+  } else {
+    aboutLessonsBtn.classList.remove("active");
+  }
 
-//   if (
-//     pageYOffset + window.innerHeight ===
-//     document.documentElement.scrollHeight
-//   ) {
-//     aboutLessonsBtn.classList.remove("active");
-//     aboutUsBtn.classList.remove("active");
-//     contactsBtn.classList.add("active");
-//   } else {
-//     countSection.classList.remove("active");
-//   }
-// });
+  if (
+    window.pageYOffset >=
+      programSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        header.clientHeight -
+        1 &&
+    programSection.getBoundingClientRect().bottom >= 0
+  ) {
+    aboutLessonsBtn.classList.remove("active");
+    programBtn.classList.add("active");
+    teachersBtn.classList.remove("active");
+    reviewBtn.classList.remove("active");
+    contactsBtn.classList.remove("active");
+  } else {
+    programBtn.classList.remove("active");
+  }
+
+  if (
+    window.pageYOffset >=
+      teachersSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        header.clientHeight -
+        1 &&
+    teachersSection.getBoundingClientRect().bottom >= 0
+  ) {
+    aboutLessonsBtn.classList.remove("active");
+    programBtn.classList.remove("active");
+    teachersBtn.classList.add("active");
+    reviewBtn.classList.remove("active");
+    contactsBtn.classList.remove("active");
+  } else {
+    teachersBtn.classList.remove("active");
+  }
+
+  if (
+    window.pageYOffset >=
+      reviewSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        header.clientHeight -
+        1 &&
+    reviewSection.getBoundingClientRect().bottom >= 0
+  ) {
+    aboutLessonsBtn.classList.remove("active");
+    programBtn.classList.remove("active");
+    teachersBtn.classList.remove("active");
+    reviewBtn.classList.add("active");
+    contactsBtn.classList.remove("active");
+  } else {
+    reviewBtn.classList.remove("active");
+  }
+
+  if (
+    window.pageYOffset ===
+    document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+  ) {
+    aboutLessonsBtn.classList.remove("active");
+    programBtn.classList.remove("active");
+    teachersBtn.classList.remove("active");
+    reviewBtn.classList.remove("active");
+    contactsBtn.classList.add("active");
+  } else {
+    contactsBtn.classList.remove("active");
+  }
+});
 
 // Dropdown Menu
 
@@ -194,6 +258,16 @@ window.addEventListener("scroll", function () {
     cover.classList.add("show");
     cover.classList.remove("hide");
   }
+});
+
+// Animation
+
+let salarySection = document.querySelector(".salary-section");
+window.addEventListener("scroll", function () {
+  console.log(
+    salarySection.getBoundingClientRect().bottom -
+      document.documentElement.clientHeight
+  );
 });
 
 // Timer

@@ -168,8 +168,17 @@ body {
 .main .review-section .review-section-content {
   justify-content: space-between;
 }
+.main .review-section .review-section-content .review-section-content-wrapper .review-section-course-name {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 20px;
+}
 .main .review-section .review-section-content .review-section-content-wrapper .review-section-content-list {
-  margin-top: 42px;
+  margin-top: 40px;
 }
 .main .review-section .review-section-content .review-section-content-wrapper .review-section-content-list .review-section-content-text {
   font-family: "Exo 2", sans-serif;
@@ -715,7 +724,6 @@ body {
 }
 .main .plan-section {
   padding-top: 50px;
-  padding-bottom: 100px;
   background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
   text-align: center;
   position: relative;
@@ -904,32 +912,6 @@ body {
   background-size: 100% 100%;
   padding: 0px 55px;
 }
-.main .plan-section .opportunities-wrapper {
-  gap: 50px;
-  text-align: left;
-}
-.main .plan-section .opportunities-header {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 43px;
-  margin-bottom: 50px;
-}
-.main .plan-section .opportunities-text-wrapper {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  gap: 20px;
-  margin-bottom: 23px;
-  align-items: center;
-}
-.main .plan-section .opportunities-text-wrapper .opportunities-item-number {
-  min-width: 16px;
-  height: 16px;
-  background: #4EBD09;
-  border-radius: 50px;
-}
 .main .schedule-section {
   padding: 100px 0px;
 }
@@ -1075,7 +1057,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 10px;
-  width: 10px;
+  min-width: 10px;
 }
 .main .tariffs-section .tariff-item .tariff-text-item {
   gap: 10px;
@@ -1090,7 +1072,7 @@ body {
   line-height: 140%;
 }
 .main .tariffs-section .tariff-item .price-and-discont {
-  justify-content: end;
+  justify-content: center;
 }
 .main .tariffs-section .tariff-item .line-through {
   font-family: "Exo 2", sans-serif;
@@ -1276,6 +1258,38 @@ body {
 .main .slider-section .big-container .slider:hover .slick-prev, .main .slider-section .big-container .slider:hover .slick-next {
   opacity: 1;
   visibility: visible;
+}
+.main .opportunities-section {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
+}
+.main .opportunities-section .opportunities-wrapper {
+  gap: 50px;
+  text-align: left;
+}
+.main .opportunities-section .opportunities-header {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.main .opportunities-section .opportunities-text-wrapper {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  gap: 20px;
+  margin-bottom: 23px;
+  align-items: center;
+}
+.main .opportunities-section .opportunities-text-wrapper .opportunities-item-number {
+  min-width: 16px;
+  height: 16px;
+  background: #4EBD09;
+  border-radius: 50px;
 }
 .main .form-section {
   padding-top: 50px;
@@ -1590,6 +1604,9 @@ body {
     width: 100%;
     text-align: center;
   }
+  .main .review-section .review-section-content .review-section-content-wrapper .review-section-course-name {
+    text-align: left;
+  }
   .main .review-section .review-section-content .review-section-content-wrapper .review-section-content-list {
     text-align: left;
   }
@@ -1742,10 +1759,6 @@ body {
   .main .plan-section .plan-section-btn {
     bottom: 40px;
   }
-  .main .plan-section .opportunities-wrapper {
-    flex-direction: column;
-    gap: 0;
-  }
   .main .schedule-section {
     padding: 50px;
   }
@@ -1821,6 +1834,13 @@ body {
   .main .companies-section .companies-slider {
     display: none;
   }
+  .main .opportunities-section {
+    padding: 50px 0px;
+  }
+  .main .opportunities-section .opportunities-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
   .main .form-section {
     padding: 70px 0px;
   }
@@ -1879,11 +1899,22 @@ body {
     margin-top: 0;
   }
   .main .review-section .review-section-header {
-    margin-top: 55px;
-    width: 190px;
+    margin-top: 110px;
+    width: 100%;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+  }
+  .main .review-section .review-section-content .review-section-content-wrapper .review-section-course-name {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 6px;
   }
   .main .review-section .review-section-content .review-section-content-wrapper .review-section-content-list {
-    margin-top: 40px;
+    margin-top: 36px;
   }
   .main .review-section .review-section-content .review-section-content-wrapper .review-section-content-list .review-section-content-text {
     font-family: "Exo 2", sans-serif;
@@ -2093,13 +2124,14 @@ body {
     margin-right: 260px;
   }
   .main .expectation-section {
-    padding: 32px;
+    padding: 32px 0px;
   }
   .main .expectation-section .aspect-section-content .aspect-section-list-item .aspect-section-text-wrapper {
     gap: 8px;
   }
   .main .companies-section {
-    padding: 48px 0px;
+    padding-top: 32px;
+    padding-bottom: 48px;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -2120,7 +2152,7 @@ body {
     width: 100%;
   }
   .main .plan-section {
-    padding: 32px 0px;
+    padding-top: 32px;
   }
   .main .plan-section .plan-section-header {
     font-family: "Exo 2", sans-serif;
@@ -2166,28 +2198,6 @@ body {
   .main .plan-section .plan-section-btn {
     bottom: 25px;
     width: 94%;
-  }
-  .main .plan-section .opportunities-section {
-    margin-top: -40px;
-  }
-  .main .plan-section .opportunities-header {
-    font-family: "Exo 2", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 130%;
-    margin-bottom: 16px;
-    text-align: left;
-  }
-  .main .plan-section .opportunities-text-wrapper {
-    margin-bottom: 16px;
-    font-family: "Exo 2", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 145%;
-    align-items: flex-start;
-  }
-  .main .plan-section .opportunities-text-wrapper .opportunities-item-number {
-    margin-top: 5px;
   }
   .main .schedule-section {
     padding: 48px 0px;
@@ -2347,6 +2357,29 @@ body {
   }
   .main .slider-section .big-container .slider .slick-next {
     right: 16px;
+  }
+  .main .opportunities-section {
+    padding: 32px 0px;
+  }
+  .main .opportunities-section .opportunities-header {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .main .opportunities-section .opportunities-text-wrapper {
+    margin-bottom: 16px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .main .opportunities-section .opportunities-text-wrapper .opportunities-item-number {
+    margin-top: 5px;
   }
   .main .form-section {
     text-align: left;

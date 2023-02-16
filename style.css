@@ -1236,8 +1236,13 @@ body {
   margin: 0px 110px;
   position: relative;
 }
-.main .slider-section .big-container .slider .slide .slide-preview-img {
+.main .slider-section .big-container .slider .slide .slide-preview {
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+}
+.main .slider-section .big-container .slider .slide .slide-preview-img {
+  height: 100%;
   cursor: pointer;
 }
 .main .slider-section .big-container .slider .slide .slide-btn {
@@ -2396,6 +2401,16 @@ body {
   }
   .main .slider-section .big-container .slider .slide {
     height: 230px;
+  }
+  .main .slider-section .big-container .slider .slide .slide-preview {
+    position: relative;
+  }
+  .main .slider-section .big-container .slider .slide .slide-preview-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
   }
   .main .slider-section .big-container .slider .slick-prev {
     left: 16px;

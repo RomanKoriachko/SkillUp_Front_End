@@ -1219,13 +1219,24 @@ body {
         width: 90%;
         
         .mobile-form {
-            padding: 20px;
+            padding: 15px;
             background-color: white;
             border-radius: 12px;
+            position: relative;
+            .close-btn {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                top: 10px;
+                right: 10px;
+                background-image: url(images/close-img.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
             .mobile-form-wrapper {
-                >p {
-                    text-align: center;
+                .mobile-form-header {
                     @include fonts.mobileH3();
+                    margin-top: 15px;
                     margin-bottom: 21px;
                 }
                 .mobile-form-input {

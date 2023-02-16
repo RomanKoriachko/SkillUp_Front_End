@@ -1,5 +1,3 @@
-// Navigation
-
 let aboutLessonsBtn = document.querySelector(".about-lessons-btn");
 let programBtn = document.querySelector(".program-btn");
 let teachersBtn = document.querySelector(".teachers-btn");
@@ -21,8 +19,12 @@ let formSection = document.querySelector(".form-section");
 
 let mobileForm = document.querySelector(".mobile-pop-up");
 let mobileFormBg = document.querySelector(".mobile-form-bg");
+let mobileformCloseBtn = document.querySelector(".close-btn");
 
 mobileFormBg.addEventListener("click", function () {
+  mobileForm.classList.add("hide");
+});
+mobileformCloseBtn.addEventListener("click", function () {
   mobileForm.classList.add("hide");
 });
 
@@ -41,6 +43,8 @@ for (let i = 0; i < registrationBtns.length; i++) {
     }
   });
 }
+
+// Navigation
 
 aboutLessonsBtn.addEventListener("click", function () {
   window.scrollTo({

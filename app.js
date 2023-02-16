@@ -264,6 +264,63 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Show video
+
+let preview = document.querySelectorAll(".slide-preview");
+let video = document.querySelectorAll(".slide-video");
+
+for (let i = 0; i < preview.length; i++) {
+  preview[i].addEventListener("click", function () {
+    video[i].classList.remove("hide");
+    preview[i].classList.add("hide");
+    video[i].src = video[i].src + "?autoplay=1";
+  });
+}
+
+// Autoplay in mobile
+
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player-1", {
+    height: "100%",
+    width: "100%",
+    videoId: "cBRC2-scJRc",
+    playerVars: { autoplay: 1 },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+function stopVideo() {
+  player.stopVideo();
+}
+
 // Animation
 
 let salarySection = document.querySelector(".salary-section");

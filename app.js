@@ -266,6 +266,15 @@ window.addEventListener("scroll", function () {
 
 // Show video
 
+let previewAbout = document.querySelector(".about-video-preview");
+let videoAbout = document.querySelector(".about-section-video");
+
+previewAbout.addEventListener("click", function () {
+  videoAbout.classList.remove("hide");
+  previewAbout.classList.add("hide");
+  videoAbout.src = videoAbout.src + "?autoplay=1";
+});
+
 let preview = document.querySelectorAll(".slide-preview");
 let video = document.querySelectorAll(".slide-video");
 

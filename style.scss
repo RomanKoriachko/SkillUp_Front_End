@@ -218,6 +218,30 @@ body {
         .about-section-wrapper {
             align-items: center;
             gap: 100px;
+            .about-video-preview{
+                border-radius: 12px;
+                width: 486px;
+                height: 370px;
+                overflow: hidden;
+                position: relative;
+            }
+            .about-video-preview-img {
+                height: 100%;
+                cursor: pointer;
+            }
+            .about-video-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url(images/youtube-logo.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 70px;
+                height: 50px;
+                cursor: pointer;
+            }
             .about-section-video {
                 min-width: 486px;
                 min-height: 370px;
@@ -1040,8 +1064,8 @@ body {
                         overflow: hidden;
                     }
                     .slide-preview-img {
-                        // width: 100%;
                         height: 100%;
+                        object-fit: cover;
                         cursor: pointer;
                     }
                     .slide-btn {
@@ -1413,6 +1437,13 @@ body {
             padding: 50px 0px;
             .about-section-wrapper {
                 display: block;
+                .about-video-preview {
+                    width: 100%;
+                }
+                .about-video-preview-img {
+                    width: 100%;
+                    object-fit: cover;
+                }
                 .about-section-content {
                     text-align: left;
                     margin-top: 20px;
@@ -1764,6 +1795,9 @@ body {
         }
         .about-section {
             .about-section-wrapper {
+                .about-video-preview {
+                    height: 250px;
+                }
                 .about-section-video {
                     height: 250px;
                     width: 100%;

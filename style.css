@@ -267,6 +267,30 @@ body {
   align-items: center;
   gap: 100px;
 }
+.main .about-section .about-section-wrapper .about-video-preview {
+  border-radius: 12px;
+  width: 486px;
+  height: 370px;
+  overflow: hidden;
+  position: relative;
+}
+.main .about-section .about-section-wrapper .about-video-preview-img {
+  height: 100%;
+  cursor: pointer;
+}
+.main .about-section .about-section-wrapper .about-video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(images/youtube-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+}
 .main .about-section .about-section-wrapper .about-section-video {
   min-width: 486px;
   min-height: 370px;
@@ -1243,6 +1267,8 @@ body {
 }
 .main .slider-section .big-container .slider .slide .slide-preview-img {
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
 }
 .main .slider-section .big-container .slider .slide .slide-btn {
@@ -1645,6 +1671,14 @@ body {
   .main .about-section .about-section-wrapper {
     display: block;
   }
+  .main .about-section .about-section-wrapper .about-video-preview {
+    width: 100%;
+  }
+  .main .about-section .about-section-wrapper .about-video-preview-img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .main .about-section .about-section-wrapper .about-section-content {
     text-align: left;
     margin-top: 20px;
@@ -1998,6 +2032,9 @@ body {
   .main .review-section .review-section-content .review-section-content-wrapper .review-section-content-btn {
     width: 100%;
     margin-top: 32px;
+  }
+  .main .about-section .about-section-wrapper .about-video-preview {
+    height: 250px;
   }
   .main .about-section .about-section-wrapper .about-section-video {
     height: 250px;

@@ -154,6 +154,9 @@ body {
   border-color: #FA7A63;
 }
 
+.main {
+  position: relative;
+}
 .main .review-section {
   background: linear-gradient(147.71deg, #F0F5E0 20.89%, #E0F5E3 80.64%);
   padding: 80px 0px;
@@ -1455,6 +1458,84 @@ body {
   border-color: #A61A01;
 }
 .main .form-section .form-section-wrapper .form-wrapper button:active {
+  background-color: #FA7A63;
+  border-color: #FA7A63;
+}
+.main .mobile-form-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.337254902);
+  z-index: 99;
+}
+.main .mobile-form-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 90%;
+}
+.main .mobile-form-content .mobile-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper > p {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 21px;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper .mobile-form-input {
+  min-width: auto;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4D4D4D;
+  padding: 0px 20px;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper .mobile-form-input::-moz-placeholder {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4D4D4D;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper .mobile-form-input::placeholder {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4D4D4D;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper button {
+  width: 184px;
+  height: 48px;
+  color: white;
+  background-color: #FA2702;
+  border: 1px solid #FA2702;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  transition: 0.3s all;
+  width: 100%;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper button:hover {
+  background-color: #A61A01;
+  border-color: #A61A01;
+}
+.main .mobile-form-content .mobile-form .mobile-form-wrapper button:active {
   background-color: #FA7A63;
   border-color: #FA7A63;
 }

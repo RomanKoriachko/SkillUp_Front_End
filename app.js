@@ -17,15 +17,28 @@ let footer = document.querySelector(".footer");
 
 let formSection = document.querySelector(".form-section");
 
+// Mobile form
+
+let mobileForm = document.querySelector(".mobile-pop-up");
+let mobileFormBg = document.querySelector(".mobile-form-bg");
+
+mobileFormBg.addEventListener("click", function () {
+  mobileForm.classList.add("hide");
+});
+
 for (let i = 0; i < registrationBtns.length; i++) {
   registrationBtns[i].addEventListener("click", function () {
-    window.scrollTo({
-      top:
-        formSection.getBoundingClientRect().top +
-        window.pageYOffset -
-        header.clientHeight,
-      behavior: "smooth",
-    });
+    if (window.innerWidth > 576) {
+      window.scrollTo({
+        top:
+          formSection.getBoundingClientRect().top +
+          window.pageYOffset -
+          header.clientHeight,
+        behavior: "smooth",
+      });
+    } else {
+      mobileForm.classList.remove("hide");
+    }
   });
 }
 

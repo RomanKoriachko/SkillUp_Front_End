@@ -31,6 +31,20 @@
         </div>
     </header>
     <main class="main">
+        <div class="mobile-pop-up hide">
+            <div class="mobile-form-bg"></div>
+            <div class="mobile-form-content">
+                <form class="mobile-form">
+                    <div class="mobile-form-wrapper">
+                        <p>Заповніть форму на персональну консультацію з кар'єрним менеджером</p>
+                        <input class="mobile-form-input name" type="text" placeholder="Ім'я">
+                        <input class="mobile-form-input phone-number" type="text" placeholder="Телефон" pattern="[0-9]{10}" maxlength="10">
+                        <input class="mobile-form-input email" type="email" placeholder="Email">
+                        <button class="mobile-form-btn" id="mobile-registration-form-btn" type="submit">Реєстрація</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <section class="review-section">
             <div class="tablet-background-1"></div>
             <div class="tablet-background-2"></div>
@@ -1060,7 +1074,7 @@
                     <form>
                         <div class="form-wrapper">
                             <input class="form-input name" type="text" placeholder="Ім'я">
-                            <input class="form-input phone-number" type="tel" placeholder="Телефон" pattern="[0-9]{10}">
+                            <input class="form-input phone-number" type="tel" placeholder="Телефон" pattern="[0-9]{10}" maxlength="10">
                             <input class="form-input email" type="email" placeholder="Email">
                             <button id="registration-form-btn" type="submit">Реєстрація</button>
                         </div>
